@@ -20,7 +20,6 @@
 Require Import Imp.
 Require Import Hoare.
 
-(* ################################################################# *)
 (** * Definitions *)
 
 Inductive hoare_proof : Assertion -> com -> Assertion -> Type :=
@@ -103,7 +102,6 @@ Print sample_proof.
             (APlus (AId X) (ANum 2)))
 *)
 
-(* ################################################################# *)
 (** * Properties *)
 
 (** **** Exercise: 2 stars (hoare_proof_sound)  *)

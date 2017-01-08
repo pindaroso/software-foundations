@@ -96,10 +96,9 @@ Check @eq.
     to [eq] is declared as implicit, so we need to turn off implicit
     arguments to see the full type of [eq].) *)
 
-(* ################################################################# *)
+(* #################################################################### *)
 (** * Logical Connectives *)
 
-(* ================================================================= *)
 (** ** Conjunction *)
 
 (** The _conjunction_ or _logical and_ of propositions [A] and [B] is
@@ -259,7 +258,6 @@ Proof.
 Check and.
 (* ===> and : Prop -> Prop -> Prop *)
 
-(* ================================================================= *)
 (** ** Disjunction *)
 
 (** Another important connective is the _disjunction_, or _logical or_
@@ -329,7 +327,6 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ================================================================= *)
 (** ** Falsehood and Negation *)
 
 (** So far, we have mostly been concerned with proving that certain
@@ -494,7 +491,6 @@ Proof.
   - (* b = true *) reflexivity.
 Qed.
 
-(* ================================================================= *)
 (** ** Truth *)
 
 (** Besides [False], Coq's standard library also defines [True], a
@@ -511,7 +507,6 @@ Proof. apply I. Qed.
     conditionals or as a parameter to higher-order [Prop]s.  We will
     see some examples such uses of [True] later on. *)
 
-(* ================================================================= *)
 (** ** Logical Equivalence *)
 
 (** The handy "if and only if" connective, which asserts that two
@@ -624,7 +619,7 @@ Proof.
   intros n m H. apply mult_0. apply H.
 Qed.
 
-(* ================================================================= *)
+(* ############################################################ *)
 (** ** Existential Quantification *)
 
 (** Another important logical connective is _existential
@@ -678,7 +673,7 @@ Proof.
    (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ################################################################# *)
+(* #################################################################### *)
 (** * Programming with Propositions *)
 
 (** The logical connectives that we have seen provide a rich
@@ -779,8 +774,8 @@ Proof.
     lemma below.  (Of course, your definition should _not_ just
     restate the left-hand side of [All_In].) *)
 
-Fixpoint All {T} (P : T -> Prop) (l : list T) : Prop 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint All {T} (P : T -> Prop) (l : list T) : Prop :=
+  (* FILL IN HERE *) admit.
 
 Lemma All_In :
   forall T (P : T -> Prop) (l : list T),
@@ -797,8 +792,8 @@ Proof.
     equivalent to [Podd n] when [n] is odd and equivalent to [Peven n]
     otherwise. *)
 
-Definition combine_odd_even (Podd Peven : nat -> Prop) : nat -> Prop 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Definition combine_odd_even (Podd Peven : nat -> Prop) : nat -> Prop :=
+  (* FILL IN HERE *) admit.
 
 (** To test your definition, prove the following facts: *)
 
@@ -827,7 +822,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ################################################################# *)
+(* #################################################################### *)
 (** * Applying Theorems to Arguments *)
 
 (** One feature of Coq that distinguishes it from many other proof
@@ -931,7 +926,7 @@ Qed.
 (** We will see many more examples of the idioms from this section in
     later chapters. *)
 
-(* ################################################################# *)
+(* #################################################################### *)
 (** * Coq vs. Set Theory *)
 
 (** Coq's logical core, the _Calculus of Inductive Constructions_,
@@ -1052,7 +1047,6 @@ Lemma tr_rev_correct : forall X, @tr_rev X = @rev X.
 (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ================================================================= *)
 (** ** Propositions and Booleans *)
 
 (** We've seen that Coq has two different ways of encoding logical
@@ -1220,8 +1214,8 @@ Proof.
     definition is correct, prove the lemma [beq_list_true_iff]. *)
 
 Fixpoint beq_list {A} (beq : A -> A -> bool)
-                  (l1 l2 : list A) : bool 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+                  (l1 l2 : list A) : bool :=
+  (* FILL IN HERE *) admit.
 
 Lemma beq_list_true_iff :
   forall A (beq : A -> A -> bool),
@@ -1255,7 +1249,6 @@ Proof.
 (* FILL IN HERE *)
 (** [] *)
 
-(* ================================================================= *)
 (** ** Classical vs. Constructive Logic *)
 
 (** We have seen that it is not possible to test whether or not a

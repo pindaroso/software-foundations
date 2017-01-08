@@ -2,7 +2,7 @@
 
 Require Export Logic.
 
-(* ################################################################# *)
+(* ####################################################### *)
 (** * Inductively Defined Propositions *)
 
 (** In the [Logic] chapter we looked at several ways of writing
@@ -36,6 +36,7 @@ Require Export Logic.
                                   ev n
                              --------------                      (ev_SS)
                               ev (S (S n))
+
 *)
 
 (** Each of the textual rules above is reformatted here as an
@@ -57,6 +58,7 @@ Require Export Logic.
                  ev 2
                 ------ (ev_SS)
                  ev 4
+
 *)
 
 (** Why call this a "tree" (rather than a "stack", for example)?
@@ -130,7 +132,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ################################################################# *)
+(* ####################################################### *)
 (** * Using Evidence in Proofs *)
 
 (** Besides _constructing_ evidence that numbers are even, we can also
@@ -155,7 +157,6 @@ Proof.
     _induction_ and _case analysis_ on such evidence.  Let's look at a
     few examples to see what this means in practice. *)
 
-(* ================================================================= *)
 (** ** Inversion on Evidence *)
 
 (** Subtracting two from an even number yields another even number.
@@ -316,7 +317,7 @@ Proof.
     arguments given to [P] (e.g., [S (S n') = n] in the proof of
     [evSS_ev]). *)
 
-(* ================================================================= *)
+(* ####################################################### *)
 (** ** Induction on Evidence *)
 
 (** The [ev_double] exercise above shows that our new notion of
@@ -459,7 +460,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ################################################################# *)
+(* ####################################################### *)
 (** * Inductive Relations *)
 
 (** A proposition parameterized by a number (such as [ev])
@@ -658,8 +659,8 @@ Inductive R : nat -> nat -> nat -> Prop :=
     Figure out which function; then state and prove this equivalence
     in Coq? *)
 
-Definition fR : nat -> nat -> nat 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Definition fR : nat -> nat -> nat :=
+  (* FILL IN HERE *) admit.
 
 Theorem R_equiv_fR : forall m n o, R m n o <-> fR m n = o.
 Proof.
@@ -724,7 +725,7 @@ End R.
 (** [] *)
 
 
-(* ################################################################# *)
+(* ############################################################ *)
 (** * Case Study: Regular Expressions *)
 
 (** The [ev] property provides a simple example for illustrating
@@ -841,6 +842,7 @@ Notation "s =~ re" := (exp_match s re) (at level 80).
                       s1 =~ re    s2 =~ Star re
                      ---------------------------            (MStarApp)
                         s1 ++ s2 =~ Star re
+
 *)
 
 (** Notice that these rules are not _quite_ the same as the informal
@@ -1045,8 +1047,8 @@ Qed.
     regular expression matches some string. Prove that your function
     is correct. *)
 
-Fixpoint re_not_empty {T} (re : reg_exp T) : bool 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint re_not_empty {T} (re : reg_exp T) : bool :=
+  (* FILL IN HERE *) admit.
 
 Lemma re_not_empty_correct : forall T (re : reg_exp T),
   (exists s, s =~ re) <-> re_not_empty re = true.
@@ -1054,7 +1056,6 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ================================================================= *)
 (** ** The [remember] Tactic *)
 
 (** One potentially confusing feature of the [induction] tactic is
@@ -1189,6 +1190,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
+(* ############################################################ *)
 (** **** Exercise: 5 stars, advanced (pumping)  *)
 (** One of the first interesting theorems in the theory of regular
     expressions is the so-called _pumping lemma_, which states,
@@ -1274,7 +1276,7 @@ Proof.
 End Pumping.
 (** [] *)
 
-(* ################################################################# *)
+(* ####################################################### *)
 (** * Improving Reflection *)
 
 (** We've seen in the [Logic] chapter that we often need to
@@ -1397,7 +1399,7 @@ Qed.
     reflection_, i.e., the pervasive use of reflection to simplify
     small proof steps with boolean computations. *)
 
-(* ################################################################# *)
+(* ####################################################### *)
 (** * Additional Exercises *)
 
 (** **** Exercise: 4 stars, recommended (palindromes)  *)
@@ -1420,6 +1422,7 @@ Qed.
     - Prove ([pal_rev] that)
 
        forall l, pal l -> l = rev l.
+
 *)
 
 (* FILL IN HERE *)
@@ -1431,6 +1434,7 @@ Qed.
     previous exercise, prove that
 
      forall l, l = rev l -> pal l.
+
 *)
 
 (* FILL IN HERE *)

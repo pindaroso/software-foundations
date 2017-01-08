@@ -39,7 +39,7 @@
 
 <div class="paragraph"> </div>
 
- In the <a href="Logic.html"><span class="inlineref">Logic</span></a> chapter we looked at several ways of writing
+ In the <a href="Logic.html"><font color="gray">Logic</font></a> chapter we looked at several ways of writing
     propositions, including conjunction, disjunction, and quantifiers.
     In this chapter, we bring a new tool into the mix: <i>inductive
     definitions</i>.
@@ -313,7 +313,7 @@ More generally, we can show that any number multiplied by 2 is even:
 
 <br/>
 <span class="id" type="keyword">Theorem</span> <a name="evenb_minus2"><span class="id" type="lemma">evenb_minus2</span></a>: <span style="font-family: arial;">&forall;</span><span class="id" type="var">n</span>,<br/>
-&nbsp;&nbsp;<a class="idref" href="Basics.html#evenb"><span class="id" type="definition">evenb</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> = <a class="idref" href="Basics.html#true"><span class="id" type="constructor">true</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="Basics.html#evenb"><span class="id" type="definition">evenb</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="abbreviation">pred</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="abbreviation">pred</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a>)) = <a class="idref" href="Basics.html#true"><span class="id" type="constructor">true</span></a>.<br/>
+&nbsp;&nbsp;<a class="idref" href="Basics.html#evenb"><span class="id" type="definition">evenb</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> = <a class="idref" href="Basics.html#true"><span class="id" type="constructor">true</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="Basics.html#evenb"><span class="id" type="definition">evenb</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="definition">pred</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="definition">pred</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a>)) = <a class="idref" href="Basics.html#true"><span class="id" type="constructor">true</span></a>.<br/>
 <span class="id" type="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" type="tactic">intros</span> [ | [ | <span class="id" type="var">n'</span> ] ].<br/>
 &nbsp;&nbsp;- <span class="comment">(*&nbsp;n&nbsp;=&nbsp;0&nbsp;*)</span> <span class="id" type="tactic">reflexivity</span>.<br/>
@@ -335,7 +335,7 @@ We can state the same claim in terms of <span class="inlinecode"><span class="id
 
 <br/>
 <span class="id" type="keyword">Theorem</span> <a name="ev_minus2"><span class="id" type="lemma">ev_minus2</span></a>: <span style="font-family: arial;">&forall;</span><span class="id" type="var">n</span>,<br/>
-&nbsp;&nbsp;<a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="abbreviation">pred</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="abbreviation">pred</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a>)).<br/>
+&nbsp;&nbsp;<a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="definition">pred</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="definition">pred</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a>)).<br/>
 <span class="id" type="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" type="tactic">intros</span> [ | [ | <span class="id" type="var">n'</span> ] ].<br/>
 &nbsp;&nbsp;- <span class="comment">(*&nbsp;n&nbsp;=&nbsp;0&nbsp;*)</span> <span class="id" type="tactic">simpl</span>. <span class="id" type="tactic">intros</span> <span class="id" type="var">_</span>. <span class="id" type="tactic">apply</span> <a class="idref" href="IndProp.html#ev_0"><span class="id" type="constructor">ev_0</span></a>.<br/>
@@ -383,7 +383,7 @@ The solution is to perform case analysis on the evidence that <span class="inlin
 
 <br/>
 <span class="id" type="keyword">Theorem</span> <a name="ev_minus2"><span class="id" type="lemma">ev_minus2</span></a> : <span style="font-family: arial;">&forall;</span><span class="id" type="var">n</span>,<br/>
-&nbsp;&nbsp;<a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="abbreviation">pred</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="abbreviation">pred</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a>)).<br/>
+&nbsp;&nbsp;<a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="definition">pred</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="definition">pred</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a>)).<br/>
 <span class="id" type="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" type="tactic">intros</span> <span class="id" type="var">n</span> <span class="id" type="var">E</span>.<br/>
 &nbsp;&nbsp;<span class="id" type="tactic">inversion</span> <span class="id" type="var">E</span> <span class="id" type="keyword">as</span> [| <span class="id" type="var">n'</span> <span class="id" type="var">E'</span>].<br/>
@@ -401,7 +401,7 @@ Note that, in this particular case, it is also possible to replace
 
 <br/>
 <span class="id" type="keyword">Theorem</span> <a name="ev_minus2'"><span class="id" type="lemma">ev_minus2'</span></a> : <span style="font-family: arial;">&forall;</span><span class="id" type="var">n</span>,<br/>
-&nbsp;&nbsp;<a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="abbreviation">pred</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="abbreviation">pred</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a>)).<br/>
+&nbsp;&nbsp;<a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="IndProp.html#ev"><span class="id" type="inductive">ev</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="definition">pred</span></a> (<a class="idref" href="http://coq.inria.fr/library/Coq.Init.Peano.html#pred"><span class="id" type="definition">pred</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a>)).<br/>
 <span class="id" type="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="id" type="tactic">intros</span> <span class="id" type="var">n</span> <span class="id" type="var">E</span>.<br/>
 &nbsp;&nbsp;<span class="id" type="tactic">destruct</span> <span class="id" type="var">E</span> <span class="id" type="keyword">as</span> [| <span class="id" type="var">n'</span> <span class="id" type="var">E'</span>].<br/>
@@ -623,7 +623,7 @@ Unfortunately, the second case is harder.  We need to show <span class="inlineco
 
 <div class="doc">
 If this looks familiar, it is no coincidence: We've encountered
-    similar problems in the <a href="Induction.html"><span class="inlineref">Induction</span></a> chapter, when trying to use
+    similar problems in the <a href="Induction.html"><font color="gray">Induction</font></a> chapter, when trying to use
     case analysis to prove results that required induction.  And once
     again the solution is... induction!
 
@@ -1114,11 +1114,11 @@ Hint: This theorem can easily be proved without using <span class="inlinecode"><
 <div class="code code-tight">
 
 <br/>
-<span class="id" type="keyword">Definition</span> <a name="R.fR"><span class="id" type="definition">fR</span></a> : <a class="idref" href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a> <br/>
-&nbsp;&nbsp;<span class="comment">(*&nbsp;REPLACE&nbsp;THIS&nbsp;LINE&nbsp;WITH&nbsp;&nbsp;&nbsp;:=&nbsp;_your_definition_&nbsp;.&nbsp;*)</span> . <span class="id" type="var">Admitted</span>.<br/>
+<span class="id" type="keyword">Definition</span> <a name="R.fR"><span class="id" type="definition">fR</span></a> : <a class="idref" href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a> <span style="font-family: arial;">&rarr;</span> <a class="idref" href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat"><span class="id" type="inductive">nat</span></a> :=<br/>
+&nbsp;&nbsp;<span class="comment">(*&nbsp;FILL&nbsp;IN&nbsp;HERE&nbsp;*)</span> <a class="idref" href="Basics.html#admit"><span class="id" type="axiom">admit</span></a>.<br/>
 
 <br/>
-<span class="id" type="keyword">Theorem</span> <a name="R.R_equiv_fR"><span class="id" type="lemma">R_equiv_fR</span></a> : <span style="font-family: arial;">&forall;</span><span class="id" type="var">m</span> <span class="id" type="var">n</span> <span class="id" type="var">o</span>, <a class="idref" href="IndProp.html#R.R"><span class="id" type="inductive">R</span></a> <a class="idref" href="IndProp.html#m"><span class="id" type="variable">m</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> <a class="idref" href="IndProp.html#o"><span class="id" type="variable">o</span></a> <span style="font-family: arial;">&harr;</span> <a class="idref" href="IndProp.html#R.fR"><span class="id" type="axiom">fR</span></a> <a class="idref" href="IndProp.html#m"><span class="id" type="variable">m</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> = <a class="idref" href="IndProp.html#o"><span class="id" type="variable">o</span></a>.<br/>
+<span class="id" type="keyword">Theorem</span> <a name="R.R_equiv_fR"><span class="id" type="lemma">R_equiv_fR</span></a> : <span style="font-family: arial;">&forall;</span><span class="id" type="var">m</span> <span class="id" type="var">n</span> <span class="id" type="var">o</span>, <a class="idref" href="IndProp.html#R.R"><span class="id" type="inductive">R</span></a> <a class="idref" href="IndProp.html#m"><span class="id" type="variable">m</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> <a class="idref" href="IndProp.html#o"><span class="id" type="variable">o</span></a> <span style="font-family: arial;">&harr;</span> <a class="idref" href="IndProp.html#R.fR"><span class="id" type="definition">fR</span></a> <a class="idref" href="IndProp.html#m"><span class="id" type="variable">m</span></a> <a class="idref" href="IndProp.html#n"><span class="id" type="variable">n</span></a> = <a class="idref" href="IndProp.html#o"><span class="id" type="variable">o</span></a>.<br/>
 <span class="id" type="keyword">Proof</span>.<br/>
 <span class="comment">(*&nbsp;FILL&nbsp;IN&nbsp;HERE&nbsp;*)</span> <span class="id" type="var">Admitted</span>.<br/>
 </div>
@@ -1640,7 +1640,7 @@ We can also prove general facts about <span class="inlinecode"><span class="id" 
 
 <div class="doc">
 The next lemma is stated in terms of the <span class="inlinecode"><span class="id" type="var">fold</span></span> function from the
-    <a href="Poly.html"><span class="inlineref">Poly</span></a> chapter: If <span class="inlinecode"><span class="id" type="var">ss</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" type="var">list</span></span> <span class="inlinecode">(<span class="id" type="var">list</span></span> <span class="inlinecode"><span class="id" type="var">T</span>)</span> represents a sequence of
+    <a href="Poly.html"><font color="gray">Poly</font></a> chapter: If <span class="inlinecode"><span class="id" type="var">ss</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" type="var">list</span></span> <span class="inlinecode">(<span class="id" type="var">list</span></span> <span class="inlinecode"><span class="id" type="var">T</span>)</span> represents a sequence of
     strings <span class="inlinecode"><span class="id" type="var">s<sub>1</sub></span>,</span> <span class="inlinecode">...,</span> <span class="inlinecode"><span class="id" type="var">sn</span></span>, then <span class="inlinecode"><span class="id" type="var">fold</span></span> <span class="inlinecode"><span class="id" type="var">app</span></span> <span class="inlinecode"><span class="id" type="var">ss</span></span> <span class="inlinecode">[]</span> is the result of
     concatenating them all together. 
 </div>
@@ -1775,12 +1775,12 @@ Something interesting happens in the <span class="inlinecode"><span class="id" t
 <div class="code code-tight">
 
 <br/>
-<span class="id" type="keyword">Fixpoint</span> <a name="re_not_empty"><span class="id" type="definition">re_not_empty</span></a> {<span class="id" type="var">T</span>} (<span class="id" type="var">re</span> : <a class="idref" href="IndProp.html#reg_exp"><span class="id" type="inductive">reg_exp</span></a> <a class="idref" href="IndProp.html#T"><span class="id" type="variable">T</span></a>) : <a class="idref" href="Basics.html#bool"><span class="id" type="inductive">bool</span></a> <br/>
-&nbsp;&nbsp;<span class="comment">(*&nbsp;REPLACE&nbsp;THIS&nbsp;LINE&nbsp;WITH&nbsp;&nbsp;&nbsp;:=&nbsp;_your_definition_&nbsp;.&nbsp;*)</span> . <span class="id" type="var">Admitted</span>.<br/>
+<span class="id" type="keyword">Fixpoint</span> <a name="re_not_empty"><span class="id" type="definition">re_not_empty</span></a> {<span class="id" type="var">T</span>} (<span class="id" type="var">re</span> : <a class="idref" href="IndProp.html#reg_exp"><span class="id" type="inductive">reg_exp</span></a> <a class="idref" href="IndProp.html#T"><span class="id" type="variable">T</span></a>) : <a class="idref" href="Basics.html#bool"><span class="id" type="inductive">bool</span></a> :=<br/>
+&nbsp;&nbsp;<span class="comment">(*&nbsp;FILL&nbsp;IN&nbsp;HERE&nbsp;*)</span> <a class="idref" href="Basics.html#admit"><span class="id" type="axiom">admit</span></a>.<br/>
 
 <br/>
 <span class="id" type="keyword">Lemma</span> <a name="re_not_empty_correct"><span class="id" type="lemma">re_not_empty_correct</span></a> : <span style="font-family: arial;">&forall;</span><span class="id" type="var">T</span> (<span class="id" type="var">re</span> : <a class="idref" href="IndProp.html#reg_exp"><span class="id" type="inductive">reg_exp</span></a> <a class="idref" href="IndProp.html#T"><span class="id" type="variable">T</span></a>),<br/>
-&nbsp;&nbsp;(<span style="font-family: arial;">&exist;</span><span class="id" type="var">s</span>, <a class="idref" href="IndProp.html#s"><span class="id" type="variable">s</span></a> =~ <a class="idref" href="IndProp.html#re"><span class="id" type="variable">re</span></a>) <span style="font-family: arial;">&harr;</span> <a class="idref" href="IndProp.html#re_not_empty"><span class="id" type="axiom">re_not_empty</span></a> <a class="idref" href="IndProp.html#re"><span class="id" type="variable">re</span></a> = <a class="idref" href="Basics.html#true"><span class="id" type="constructor">true</span></a>.<br/>
+&nbsp;&nbsp;(<span style="font-family: arial;">&exist;</span><span class="id" type="var">s</span>, <a class="idref" href="IndProp.html#s"><span class="id" type="variable">s</span></a> =~ <a class="idref" href="IndProp.html#re"><span class="id" type="variable">re</span></a>) <span style="font-family: arial;">&harr;</span> <a class="idref" href="IndProp.html#re_not_empty"><span class="id" type="definition">re_not_empty</span></a> <a class="idref" href="IndProp.html#re"><span class="id" type="variable">re</span></a> = <a class="idref" href="Basics.html#true"><span class="id" type="constructor">true</span></a>.<br/>
 <span class="id" type="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="comment">(*&nbsp;FILL&nbsp;IN&nbsp;HERE&nbsp;*)</span> <span class="id" type="var">Admitted</span>.<br/>
 </div>
@@ -2140,7 +2140,7 @@ To streamline the proof (which you are to fill in), the <span class="inlinecode"
 
 <div class="paragraph"> </div>
 
- We've seen in the <a href="Logic.html"><span class="inlineref">Logic</span></a> chapter that we often need to
+ We've seen in the <a href="Logic.html"><font color="gray">Logic</font></a> chapter that we often need to
     relate boolean computations to statements in <span class="inlinecode"><span class="id" type="keyword">Prop</span></span>.
     Unfortunately, performing this conversion by hand can result in
     tedious proof scripts.  Consider the proof of the following

@@ -3,7 +3,7 @@
 Require Export Induction.
 Module NatList.
 
-(* ################################################################# *)
+(* ###################################################### *)
 (** * Pairs of Numbers *)
 
 (** In an [Inductive] type definition, each constructor can take
@@ -112,7 +112,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ################################################################# *)
+(* ###################################################### *)
 (** * Lists of Numbers *)
 
 (** Generalizing the definition of pairs, we can describe the
@@ -172,7 +172,6 @@ Definition mylist3 := [1;2;3].
    notations and translating them to nested sequences of binary
    constructors. *)
 
-(* ----------------------------------------------------------------- *)
 (** *** Repeat *)
 
 (** A number of functions are useful for manipulating lists.
@@ -186,7 +185,6 @@ Fixpoint repeat (n count : nat) : natlist :=
   | S count' => n :: (repeat n count')
   end.
 
-(* ----------------------------------------------------------------- *)
 (** *** Length *)
 
 (** The [length] function calculates the length of a list. *)
@@ -197,7 +195,6 @@ Fixpoint length (l:natlist) : nat :=
   | h :: t => S (length t)
   end.
 
-(* ----------------------------------------------------------------- *)
 (** *** Append *)
 
 (** The [app] function concatenates (appends) two lists. *)
@@ -221,7 +218,6 @@ Proof. reflexivity.  Qed.
 Example test_app3:             [1;2;3] ++ nil = [1;2;3].
 Proof. reflexivity.  Qed.
 
-(* ----------------------------------------------------------------- *)
 (** *** Head (with default) and Tail *)
 
 (** Here are two smaller examples of programming with lists.
@@ -250,7 +246,6 @@ Proof. reflexivity.  Qed.
 Example test_tl:              tl [1;2;3] = [2;3].
 Proof. reflexivity.  Qed.
 
-(* ----------------------------------------------------------------- *)
 (** *** Exercises *)
 
 (** **** Exercise: 2 stars, recommended (list_funs)  *)
@@ -258,22 +253,22 @@ Proof. reflexivity.  Qed.
     [countoddmembers] below. Have a look at the tests to understand
     what these functions should do. *)
 
-Fixpoint nonzeros (l:natlist) : natlist 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint nonzeros (l:natlist) : natlist :=
+  (* FILL IN HERE *) admit.
 
 Example test_nonzeros:
   nonzeros [0;1;0;2;3;0;0] = [1;2;3].
   (* FILL IN HERE *) Admitted.
 
-Fixpoint oddmembers (l:natlist) : natlist 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint oddmembers (l:natlist) : natlist :=
+  (* FILL IN HERE *) admit.
 
 Example test_oddmembers:
   oddmembers [0;1;0;2;3;0;0] = [1;3].
   (* FILL IN HERE *) Admitted.
 
-Fixpoint countoddmembers (l:natlist) : nat 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint countoddmembers (l:natlist) : nat :=
+  (* FILL IN HERE *) admit.
 
 Example test_countoddmembers1:
   countoddmembers [1;0;3;1;4;5] = 4.
@@ -301,8 +296,8 @@ Example test_countoddmembers3:
     both lists at the same time.  (One possible solution requires
     defining a new kind of pairs, but this is not the only way.)  *)
 
-Fixpoint alternate (l1 l2 : natlist) : natlist 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint alternate (l1 l2 : natlist) : natlist :=
+  (* FILL IN HERE *) admit.
 
 Example test_alternate1:
   alternate [1;2;3] [4;5;6] = [1;4;2;5;3;6].
@@ -321,7 +316,7 @@ Example test_alternate4:
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ----------------------------------------------------------------- *)
+(* ###################################################### *)
 (** *** Bags via Lists *)
 
 (** A [bag] (or [multiset]) is like a set, except that each element
@@ -334,8 +329,8 @@ Definition bag := natlist.
 (** Complete the following definitions for the functions
     [count], [sum], [add], and [member] for bags. *)
 
-Fixpoint count (v:nat) (s:bag) : nat 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint count (v:nat) (s:bag) : nat :=
+  (* FILL IN HERE *) admit.
 
 (** All these proofs can be done just by [reflexivity]. *)
 
@@ -356,22 +351,22 @@ Example test_count2:              count 6 [1;2;3;1;4;1] = 0.
     think about whether [sum] can be implemented in another way --
     perhaps by using functions that have already been defined.  *)
 
-Definition sum : bag -> bag -> bag 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Definition sum : bag -> bag -> bag :=
+  (* FILL IN HERE *) admit.
 
 Example test_sum1:              count 1 (sum [1;2;3] [1;4;1]) = 3.
  (* FILL IN HERE *) Admitted.
 
-Definition add (v:nat) (s:bag) : bag 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Definition add (v:nat) (s:bag) : bag :=
+  (* FILL IN HERE *) admit.
 
 Example test_add1:                count 1 (add 1 [1;4;1]) = 3.
  (* FILL IN HERE *) Admitted.
 Example test_add2:                count 5 (add 1 [1;4;1]) = 0.
  (* FILL IN HERE *) Admitted.
 
-Definition member (v:nat) (s:bag) : bool 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Definition member (v:nat) (s:bag) : bool :=
+  (* FILL IN HERE *) admit.
 
 Example test_member1:             member 1 [1;4;1] = true.
  (* FILL IN HERE *) Admitted.
@@ -383,11 +378,10 @@ Example test_member2:             member 2 [1;4;1] = false.
 (** **** Exercise: 3 stars, optional (bag_more_functions)  *)
 (** Here are some more bag functions for you to practice with. *)
 
-(** When remove_one is applied to a bag without the number to remove,
-   it should return the same bag unchanged. *)
-
-Fixpoint remove_one (v:nat) (s:bag) : bag 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint remove_one (v:nat) (s:bag) : bag :=
+  (* When remove_one is applied to a bag without the number to remove,
+     it should return the same bag unchanged. *)
+  (* FILL IN HERE *) admit.
 
 Example test_remove_one1:
   count 5 (remove_one 5 [2;1;5;4;1]) = 0.
@@ -405,8 +399,8 @@ Example test_remove_one4:
   count 5 (remove_one 5 [2;1;5;4;5;1;4]) = 1.
   (* FILL IN HERE *) Admitted.
 
-Fixpoint remove_all (v:nat) (s:bag) : bag 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint remove_all (v:nat) (s:bag) : bag :=
+  (* FILL IN HERE *) admit.
 
 Example test_remove_all1:  count 5 (remove_all 5 [2;1;5;4;1]) = 0.
  (* FILL IN HERE *) Admitted.
@@ -417,8 +411,8 @@ Example test_remove_all3:  count 4 (remove_all 5 [2;1;4;5;1;4]) = 2.
 Example test_remove_all4:  count 5 (remove_all 5 [2;1;5;4;5;1;4;5;1;4]) = 0.
  (* FILL IN HERE *) Admitted.
 
-Fixpoint subset (s1:bag) (s2:bag) : bool 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint subset (s1:bag) (s2:bag) : bool :=
+  (* FILL IN HERE *) admit.
 
 Example test_subset1:              subset [1;2] [2;1;4;1] = true.
  (* FILL IN HERE *) Admitted.
@@ -428,22 +422,20 @@ Example test_subset2:              subset [1;2;2] [2;1;4;1] = false.
 
 (** **** Exercise: 3 stars, recommended (bag_theorem)  *)
 (** Write down an interesting theorem [bag_theorem] about bags
-    involving the functions [count] and [add], and prove it.  Note
-    that, since this problem is somewhat open-ended, it's possible
-    that you may come up with a theorem which is true, but whose proof
-    requires techniques you haven't learned yet.  Feel free to ask for
-    help if you get stuck! *)
+    involving the functions [count] and [add], and prove it.  For
+    this, replace the [admit] command below with the statement of your
+    theorem. Note that, since this problem is somewhat open-ended,
+    it's possible that you may come up with a theorem which is true,
+    but whose proof requires techniques you haven't learned yet.  Feel
+    free to ask for help if you get stuck! *)
 
-(*
-Theorem bag_theorem : ...
+Theorem bag_theorem :
+  (* FILL IN HERE *) admit.
 Proof.
-  ...
-Qed.
-*)
-
+  (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ################################################################# *)
+(* ###################################################### *)
 (** * Reasoning About Lists *)
 
 (** As with numbers, simple facts about list-processing
@@ -481,7 +473,7 @@ Proof.
 (** Usually, though, interesting theorems about lists require
     induction for their proofs. *)
 
-(* ----------------------------------------------------------------- *)
+(* ###################################################### *)
 (** *** Micro-Sermon *)
 
 (** Simply reading example proof scripts will not get you very far!
@@ -490,7 +482,7 @@ Proof.
     or less guaranteed that the exercises will make no sense when you
     get to them.  'Nuff said. *)
 
-(* ================================================================= *)
+(* ###################################################### *)
 (** ** Induction on Lists *)
 
 (** Proofs by induction over datatypes like [natlist] are a
@@ -571,7 +563,6 @@ Proof.
 
      which is immediate from the induction hypothesis.  [] *)
 
-(* ----------------------------------------------------------------- *)
 (** *** Reversing a list *)
 
 (** For a slightly more involved example of inductive proof over
@@ -589,7 +580,6 @@ Proof. reflexivity.  Qed.
 Example test_rev2:            rev nil = nil.
 Proof. reflexivity.  Qed.
 
-(* ----------------------------------------------------------------- *)
 (** *** Proofs about reverse *)
 
 (** Now let's prove some theorems about our newly defined [rev].
@@ -726,7 +716,7 @@ Proof.
     familiar with.  The more pedantic style is a good default for our
     present purposes. *)
 
-(* ================================================================= *)
+(* ###################################################### *)
 (** ** [SearchAbout] *)
 
 (** We've seen that proofs can make use of other theorems we've
@@ -749,7 +739,7 @@ Proof.
     C-a C-a]. Pasting its response into your buffer can be
     accomplished with [C-c C-;]. *)
 
-(* ================================================================= *)
+(* ###################################################### *)
 (** ** List Exercises, Part 1 *)
 
 (** **** Exercise: 3 stars (list_exercises)  *)
@@ -788,8 +778,8 @@ Proof.
     lists of numbers for equality.  Prove that [beq_natlist l l]
     yields [true] for every list [l]. *)
 
-Fixpoint beq_natlist (l1 l2 : natlist) : bool 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Fixpoint beq_natlist (l1 l2 : natlist) : bool :=
+  (* FILL IN HERE *) admit.
 
 Example test_beq_natlist1 :
   (beq_natlist nil nil = true).
@@ -809,7 +799,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ================================================================= *)
+(* ###################################################### *)
 (** ** List Exercises, Part 2 *)
 
 (** **** Exercise: 3 stars, advanced (bag_proofs)  *)
@@ -856,7 +846,7 @@ Proof.
 (** [] *)
 
 
-(* ################################################################# *)
+(* ###################################################### *)
 (** * Options *)
 
 (** Suppose we want to write a function that returns the [n]th
@@ -940,8 +930,8 @@ Definition option_elim (d : nat) (o : natoption) : nat :=
 (** Using the same idea, fix the [hd] function from earlier so we don't
     have to pass a default element for the [nil] case.  *)
 
-Definition hd_error (l : natlist) : natoption 
-  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
+Definition hd_error (l : natlist) : natoption :=
+  (* FILL IN HERE *) admit.
 
 Example test_hd_error1 : hd_error [] = None.
  (* FILL IN HERE *) Admitted.
@@ -964,7 +954,7 @@ Proof.
 
 End NatList.
 
-(* ################################################################# *)
+(* ###################################################### *)
 (** * Partial Maps *)
 
 (** As a final illustration of how data structures can be defined in
@@ -1059,12 +1049,11 @@ Inductive baz : Type :=
   | Baz1 : baz -> baz
   | Baz2 : baz -> bool -> baz.
 
-(** How _many_ elements does the type [baz] have?  (Answer in English
-    or the natural language of your choice.)
+(** How _many_ elements does the type [baz] have?
 
 (* FILL IN HERE *)
 *)
 (** [] *)
 
-(** $Date: 2016-07-11 21:31:32 -0400 (Mon, 11 Jul 2016) $ *)
+(** $Date: 2016-05-24 14:00:08 -0400 (Tue, 24 May 2016) $ *)
 
