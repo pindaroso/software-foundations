@@ -52,13 +52,4 @@ index 18ddc1e..9faec71 100644
 +
  -include $(addsuffix .d,$(VFILES))
  .SECONDARY: $(addsuffix .d,$(VFILES))
-
-diff --git a/src/MoreStlc.v b/src/MoreStlc.v
-index a310fb0..b59a5a1 100644
---- a/src/MoreStlc.v
-+++ b/src/MoreStlc.v
-@@ -281,7 +281,8 @@ Require Import Stlc.
-     construct (a very simplified form of Coq's [match]) to destruct
-     them. For example, the following procedure converts a [Nat+Bool]
-     into a [Nat]: *)
 ```
