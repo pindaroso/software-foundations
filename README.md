@@ -6,6 +6,10 @@ Includes a [PDF version](doc/pdf/pierce-2016.pdf) of the book.
 
 #### Usage
 
+*OSX Requirements*
+
+* [mactex](https://tug.org/mactex/mactex-download.html)
+
 To rebuild the PDF, ensure Coq and LaTeX are installed, then:
 
 ```
@@ -33,7 +37,7 @@ index 18ddc1e..9faec71 100644
 @@ -65,7 +65,7 @@ COQCHK?="$(COQBIN)coqchk"
  #                    #
  ######################
- 
+
 -VFILES:=Symbols.v\
 +RVFILES:=Symbols.v\
    Preface.v\
@@ -42,13 +46,13 @@ index 18ddc1e..9faec71 100644
 @@ -106,6 +106,9 @@ VFILES:=Symbols.v\
    Postscript.v\
    Bib.v
- 
+
 +reverse=$(if $1,$(call reverse,$(wordlist 2,$(words $1),$1))) $(firstword $1)
 +VFILES:=$(call reverse,$(RVFILES))
 +
  -include $(addsuffix .d,$(VFILES))
  .SECONDARY: $(addsuffix .d,$(VFILES))
- 
+
 diff --git a/src/MoreStlc.v b/src/MoreStlc.v
 index a310fb0..b59a5a1 100644
 --- a/src/MoreStlc.v
@@ -57,10 +61,4 @@ index a310fb0..b59a5a1 100644
      construct (a very simplified form of Coq's [match]) to destruct
      them. For example, the following procedure converts a [Nat+Bool]
      into a [Nat]: *)
--(** <<
-+(**
-+
-     getNat =
-       \x:Nat+Bool.
-         case x of
 ```

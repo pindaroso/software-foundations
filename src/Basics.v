@@ -6,7 +6,7 @@
           ###  PLEASE DO NOT DISTRIBUTE SOLUTIONS PUBLICLY  ###
           #####################################################
 
-   (See the [Preface] for why.) 
+   (See the [Preface] for why.)
 
 *)
 
@@ -792,8 +792,8 @@ Proof.
 (** We can also use the [rewrite] tactic with a previously proved
     theorem instead of a hypothesis from the context. If the statement
     of the previously proved theorem involves quantified variables,
-    as in the example below, Coq tries to instantiate them 
-    by matching with the current goal. *)   
+    as in the example below, Coq tries to instantiate them
+    by matching with the current goal. *)
 
 Theorem mult_0_plus : forall n m : nat,
   (0 + n) * m = n * m.
