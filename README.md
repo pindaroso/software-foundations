@@ -18,7 +18,7 @@ $ make
 
 ### Notes
 
-The original [`Makefile`](src/Makefile) has been modified to work around the LaTeX nesting limit, and to generate chapters in the right order.  A syntax error has also been fixed in [`MoreStlc.v`](src/MoreStlc.v).
+The original [`Makefile`](src/Makefile) has been modified to work around the LaTeX nesting limit, and to generate chapters in the right order.
 
 ```diff
 diff --git a/src/Makefile b/src/Makefile
