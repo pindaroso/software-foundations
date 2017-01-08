@@ -8,7 +8,7 @@ Includes a [PDF version](doc/pdf/pierce-2016.pdf) of the book.
 
 *OSX Requirements*
 
-* [mactex](https://tug.org/mactex/mactex-download.html)
+* mactex i.e., `brew cask install mactex`
 
 To rebuild the PDF, ensure Coq and LaTeX are installed, then:
 
