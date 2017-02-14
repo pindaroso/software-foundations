@@ -5,7 +5,7 @@
 
 Require Export ProofObjects.
 
-(* ##################################################### *)
+(* ################################################################# *)
 (** * Basics *)
 
 (** Every time we declare a new [Inductive] datatype, Coq
@@ -178,6 +178,7 @@ Inductive ExSet : Type :=
 .
 (** [] *)
 
+(* ################################################################# *)
 (** * Polymorphism *)
 
 (** Next, what about polymorphic datatypes?
@@ -228,7 +229,6 @@ Check tree_ind.
             (forall m : mytype X, P m ->
                forall n : nat, P (constr3 X m n)) ->
             forall m : mytype X, P m
-
 *) 
 (** [] *)
 
@@ -243,7 +243,6 @@ Check tree_ind.
              (forall f1 : nat -> foo X Y,
                (forall n : nat, P (f1 n)) -> P (quux X Y f1)) ->
              forall f2 : foo X Y, P f2
-
 *) 
 (** [] *)
 
@@ -264,12 +263,11 @@ Inductive foo' (X:Type) : Type :=
                     _______________________   ) ->
              ___________________________________________ ->
              forall f : foo' X, ________________________
-
 *)
 
 (** [] *)
 
-(* ##################################################### *)
+(* ################################################################# *)
 (** * Induction Hypotheses *)
 
 (** Where does the phrase "induction hypothesis" fit into this story?
@@ -326,7 +324,7 @@ Proof.
     implication -- the assumption that [P] holds of [n'], which we are
     allowed to use in proving that [P] holds for [S n']. *)
 
-(* ##################################################### *)
+(* ################################################################# *)
 (** * More on the [induction] Tactic *)
 
 (** The [induction] tactic actually does even more low-level
@@ -409,7 +407,7 @@ Proof.
 (* FILL IN HERE *)
 (** [] *)
 
-(* ##################################################### *)
+(* ################################################################# *)
 (** * Induction Principles in [Prop] *)
 
 (** Earlier, we looked in detail at the induction principles that Coq
@@ -437,7 +435,7 @@ Proof.
          (forall (m : nat) (E : ev m),
             P m E ->
             P (S (S m)) (ev_SS m E)) ->
-         forall (n : nat) (E : gorgeous n),
+         forall (n : nat) (E : ev n),
          P n E
 
      ... because:
@@ -547,7 +545,7 @@ Check le_ind.
            (forall m : nat, n <= m -> P m -> P (S m)) ->
            forall n0 : nat, n <= n0 -> P n0 *)
 
-(* ####################################################### *)
+(* ################################################################# *)
 (** * Formal vs. Informal Proofs by Induction *)
 
 (** Question: What is the relation between a formal proof of a
@@ -597,6 +595,7 @@ Check le_ind.
    [Type]) and one for proofs by induction over _evidence_ (i.e.,
    where the inductively defined thing lives in [Prop]). *)
 
+(* ================================================================= *)
 (** ** Induction Over an Inductively Defined Set *)
 
 (** _Template_:
@@ -647,6 +646,7 @@ Check le_ind.
           But this follows directly from the induction hypothesis,
           picking [n'] to be [length l'].  [] *)
 
+(* ================================================================= *)
 (** ** Induction Over an Inductively Defined Proposition *)
 
 (** Since inductively defined proof objects are often called
@@ -696,4 +696,4 @@ Check le_ind.
 
              But then, by [le_S], [n <= S o'].  [] *)
 
-(** $Date: 2016-05-26 16:17:19 -0400 (Thu, 26 May 2016) $ *)
+(** $Date: 2016-07-14 17:02:35 -0400 (Thu, 14 Jul 2016) $ *)

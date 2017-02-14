@@ -1532,7 +1532,7 @@ After unfolding <span class="inlinecode"><span class="id" type="var">sillyfun</s
 </div>
 <div class="code code-space">
 <span class="id" type="keyword">Theorem</span> <a name="combine_split"><span class="id" type="lemma">combine_split</span></a> : <span style="font-family: arial;">&forall;</span><span class="id" type="var">X</span> <span class="id" type="var">Y</span> (<span class="id" type="var">l</span> : <a class="idref" href="Poly.html#list"><span class="id" type="inductive">list</span></a> (<a class="idref" href="Tactics.html#X"><span class="id" type="variable">X</span></a> * <a class="idref" href="Tactics.html#Y"><span class="id" type="variable">Y</span></a>)) <span class="id" type="var">l<sub>1</sub></span> <span class="id" type="var">l<sub>2</sub></span>,<br/>
-&nbsp;&nbsp;<a class="idref" href="Poly.html#split"><span class="id" type="definition">split</span></a> <a class="idref" href="Tactics.html#l"><span class="id" type="variable">l</span></a> = (<a class="idref" href="Tactics.html#l<sub>1</sub>"><span class="id" type="variable">l<sub>1</sub></span></a>, <a class="idref" href="Tactics.html#l<sub>2</sub>"><span class="id" type="variable">l<sub>2</sub></span></a>) <span style="font-family: arial;">&rarr;</span><br/>
+&nbsp;&nbsp;<a class="idref" href="Poly.html#split"><span class="id" type="axiom">split</span></a> <a class="idref" href="Tactics.html#l"><span class="id" type="variable">l</span></a> = (<a class="idref" href="Tactics.html#l<sub>1</sub>"><span class="id" type="variable">l<sub>1</sub></span></a>, <a class="idref" href="Tactics.html#l<sub>2</sub>"><span class="id" type="variable">l<sub>2</sub></span></a>) <span style="font-family: arial;">&rarr;</span><br/>
 &nbsp;&nbsp;<a class="idref" href="Poly.html#combine"><span class="id" type="definition">combine</span></a> <a class="idref" href="Tactics.html#l<sub>1</sub>"><span class="id" type="variable">l<sub>1</sub></span></a> <a class="idref" href="Tactics.html#l<sub>2</sub>"><span class="id" type="variable">l<sub>2</sub></span></a> = <a class="idref" href="Tactics.html#l"><span class="id" type="variable">l</span></a>.<br/>
 <span class="id" type="keyword">Proof</span>.<br/>
 &nbsp;&nbsp;<span class="comment">(*&nbsp;FILL&nbsp;IN&nbsp;HERE&nbsp;*)</span> <span class="id" type="var">Admitted</span>.<br/>
@@ -1865,11 +1865,11 @@ We get stuck at this point because the context does not
 <div class="code code-tight">
 
 <br/>
-<span class="id" type="keyword">Definition</span> <a name="split_combine_statement"><span class="id" type="definition">split_combine_statement</span></a> : <span class="id" type="keyword">Prop</span> :=<br/>
-<span class="comment">(*&nbsp;FILL&nbsp;IN&nbsp;HERE&nbsp;*)</span> <a class="idref" href="Basics.html#admit"><span class="id" type="axiom">admit</span></a>.<br/>
+<span class="id" type="keyword">Definition</span> <a name="split_combine_statement"><span class="id" type="definition">split_combine_statement</span></a> : <span class="id" type="keyword">Prop</span> <br/>
+&nbsp;&nbsp;<span class="comment">(*&nbsp;REPLACE&nbsp;THIS&nbsp;LINE&nbsp;WITH&nbsp;&nbsp;&nbsp;:=&nbsp;_your_definition_&nbsp;.&nbsp;*)</span> . <span class="id" type="var">Admitted</span>.<br/>
 
 <br/>
-<span class="id" type="keyword">Theorem</span> <a name="split_combine"><span class="id" type="lemma">split_combine</span></a> : <a class="idref" href="Tactics.html#split_combine_statement"><span class="id" type="definition">split_combine_statement</span></a>.<br/>
+<span class="id" type="keyword">Theorem</span> <a name="split_combine"><span class="id" type="lemma">split_combine</span></a> : <a class="idref" href="Tactics.html#split_combine_statement"><span class="id" type="axiom">split_combine_statement</span></a>.<br/>
 <span class="id" type="keyword">Proof</span>.<br/>
 <span class="comment">(*&nbsp;FILL&nbsp;IN&nbsp;HERE&nbsp;*)</span> <span class="id" type="var">Admitted</span>.<br/>
 

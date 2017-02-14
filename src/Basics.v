@@ -6,7 +6,7 @@
           ###  PLEASE DO NOT DISTRIBUTE SOLUTIONS PUBLICLY  ###
           #####################################################
 
-   (See the [Preface] for why.)
+   (See the [Preface] for why.) 
 
 *)
 
@@ -17,7 +17,7 @@
    large proofs. *)
 Definition admit {T: Type} : T.  Admitted.
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Introduction *)
 
 (** The functional programming style brings programming closer to
@@ -49,7 +49,7 @@ Definition admit {T: Type} : T.  Admitted.
     half introduces some basic _tactics_ that can be used to prove
     simple properties of Coq programs. *)
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Enumerated Types *)
 
 (** One unusual aspect of Coq is that its set of built-in
@@ -70,7 +70,7 @@ Definition admit {T: Type} : T.  Admitted.
     To see how this definition mechanism works, let's start with a
     very simple example. *)
 
-(* ###################################################################### *)
+(* ================================================================= *)
 (** ** Days of the Week *)
 
 (** The following declaration tells Coq that we are defining
@@ -159,7 +159,7 @@ Proof. simpl. reflexivity.  Qed.
     languages.  Indeed, this is one of the main uses for which Coq was
     developed.  We'll come back to this topic in later chapters. *)
 
-(* ###################################################################### *)
+(* ================================================================= *)
 (** ** Booleans *)
 
 (** In a similar way, we can define the standard type [bool] of
@@ -244,8 +244,8 @@ Proof. simpl. reflexivity. Qed.
     should return [true] if either or both of its inputs are
     [false]. *)
 
-Definition nandb (b1:bool) (b2:bool) : bool :=
-  (* FILL IN HERE *) admit.
+Definition nandb (b1:bool) (b2:bool) : bool 
+  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
 
 Example test_nandb1:               (nandb true false) = true.
 (* FILL IN HERE *) Admitted.
@@ -262,8 +262,8 @@ Example test_nandb4:               (nandb true true) = false.
     return [true] when all of its inputs are [true], and [false]
     otherwise. *)
 
-Definition andb3 (b1:bool) (b2:bool) (b3:bool) : bool :=
-  (* FILL IN HERE *) admit.
+Definition andb3 (b1:bool) (b2:bool) (b3:bool) : bool 
+  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
 
 Example test_andb31:                 (andb3 true true true) = true.
 (* FILL IN HERE *) Admitted.
@@ -275,7 +275,7 @@ Example test_andb34:                 (andb3 true true false) = false.
 (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ###################################################################### *)
+(* ================================================================= *)
 (** ** Function Types *)
 
 (** Every expression in Coq has a type, describing what sort of
@@ -303,7 +303,7 @@ Check negb.
     be read, "Given two inputs, both of type [bool], this function
     produces an output of type [bool]." *)
 
-(* ###################################################################### *)
+(* ================================================================= *)
 (** ** Modules *)
 
 (** Coq provides a _module system_, to aid in organizing large
@@ -319,7 +319,7 @@ Check negb.
 
 Module Playground1.
 
-(* ###################################################################### *)
+(* ================================================================= *)
 (** ** Numbers *)
 
 (** The types we have defined so far are examples of "enumerated
@@ -512,8 +512,8 @@ Fixpoint exp (base power : nat) : nat :=
 
     Translate this into Coq. *)
 
-Fixpoint factorial (n:nat) : nat :=
-(* FILL IN HERE *) admit.
+Fixpoint factorial (n:nat) : nat 
+  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
 
 Example test_factorial1:          (factorial 3) = 6.
 (* FILL IN HERE *) Admitted.
@@ -592,8 +592,8 @@ Proof. simpl. reflexivity.  Qed.
     yielding a [b]oolean.  Instead of making up a new [Fixpoint] for
     this one, define it in terms of a previously defined function. *)
 
-Definition blt_nat (n m : nat) : bool :=
-  (* FILL IN HERE *) admit.
+Definition blt_nat (n m : nat) : bool 
+  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
 
 Example test_blt_nat1:             (blt_nat 2 2) = false.
 (* FILL IN HERE *) Admitted.
@@ -603,7 +603,7 @@ Example test_blt_nat3:             (blt_nat 4 2) = false.
 (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Proof by Simplification *)
 
 (** Now that we've defined a few datatypes and functions, let's
@@ -721,7 +721,7 @@ Abort.
     technique that can be used for proving this goal.  For the moment,
     though, let's look at a few more simple tactics. *)
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Proof by Rewriting *)
 
 (** This theorem is a bit more interesting than the others we've
@@ -792,8 +792,8 @@ Proof.
 (** We can also use the [rewrite] tactic with a previously proved
     theorem instead of a hypothesis from the context. If the statement
     of the previously proved theorem involves quantified variables,
-    as in the example below, Coq tries to instantiate them
-    by matching with the current goal. *)
+    as in the example below, Coq tries to instantiate them 
+    by matching with the current goal. *)   
 
 Theorem mult_0_plus : forall n m : nat,
   (0 + n) * m = n * m.
@@ -811,7 +811,7 @@ Proof.
 (** [] *)
 
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Proof by Case Analysis *)
 
 (** Of course, not everything can be proved by simple
@@ -1024,7 +1024,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ###################################################################### *)
+(* ================================================================= *)
 (** ** More on Notation (Optional) *)
 
 (** (In general, sections marked Optional are not needed to follow the
@@ -1067,7 +1067,7 @@ Notation "x * y" := (mult x y)
     which means the Integer zero (which comes from a different part of
     the standard library). *)
 
-(* ###################################################################### *)
+(* ================================================================= *)
 (** ** Fixpoints and Structural Recursion (Optional) *)
 
 (** Here is a copy of the definition of addition: *)
@@ -1101,7 +1101,7 @@ Fixpoint plus' (n : nat) (m : nat) : nat :=
 (* FILL IN HERE *)
 (** [] *)
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * More Exercises *)
 
 (** **** Exercise: 2 stars (boolean_functions)  *)
@@ -1176,5 +1176,5 @@ Proof.
 (* FILL IN HERE *)
 (** [] *)
 
-(** $Date: 2016-05-26 16:17:19 -0400 (Thu, 26 May 2016) $ *)
+(** $Date: 2016-07-13 12:41:41 -0400 (Wed, 13 Jul 2016) $ *)
 

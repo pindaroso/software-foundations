@@ -21,7 +21,7 @@ Require Export Basics.
 
     *)
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Proof by Induction *)
 
 (** We proved in the last chapter that [0] is a neutral element
@@ -174,7 +174,7 @@ Proof.
 *)
 (** [] *)
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Proofs Within Proofs *)
 
 (** In Coq, as in informal mathematics, large proofs are often
@@ -247,7 +247,7 @@ Proof.
   { rewrite -> plus_comm. reflexivity. }
   rewrite -> H. reflexivity.  Qed.
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * More Exercises *)
 
 (** **** Exercise: 3 stars, recommended (mult_comm)  *)
@@ -411,7 +411,7 @@ Proof.
 (* FILL IN HERE *)
 (** [] *)
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Formal vs. Informal Proof (Optional) *)
 
 (** "_Informal proofs are algorithms; formal proofs are code_." *)

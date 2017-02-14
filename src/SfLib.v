@@ -6,8 +6,6 @@
     instead of cluttering the top-level environment with all the
     examples and false starts in those files. *)
 
-Definition admit {T: Type} : T.  Admitted.
-
 Tactic Notation "solve_by_inversion_step" tactic(t) :=
   match goal with
   | H : _ |- _ => solve [ inversion H; subst; t ]
@@ -23,4 +21,4 @@ Tactic Notation "solve" "by" "inversion" "3" :=
 Tactic Notation "solve" "by" "inversion" :=
   solve by inversion 1.
 
-(** $Date: 2016-05-24 14:00:08 -0400 (Tue, 24 May 2016) $ *)
+(** $Date: 2016-07-11 21:31:32 -0400 (Mon, 11 Jul 2016) $ *)

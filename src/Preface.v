@@ -1,6 +1,6 @@
 (** * Preface *)
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Welcome *)
 
 (** This electronic book is a course on _Software Foundations_, the
@@ -27,7 +27,7 @@
     upper-level undergraduate and graduate students. *)
 
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Overview *)
 
 (** Building reliable software is hard.  The scale and complexity of
@@ -81,6 +81,7 @@
     Bibliographic information for all cited works can be found in the
     [Bib] chapter. *)
 
+(* ================================================================= *)
 (** ** Logic *)
 
 (** Logic is the field of study whose subject matter is _proofs_ --
@@ -102,6 +103,7 @@
     but in this course we will examine them much more deeply than you
     have probably done so far. *)
 
+(* ================================================================= *)
 (** ** Proof Assistants *)
 
 (** The flow of ideas between logic and computer science has not been
@@ -183,6 +185,7 @@
    three letters of the name of Thierry Coquand, one of Coq's early
    developers. *)
 
+(* ================================================================= *)
 (** ** Functional Programming *)
 
 (** The term _functional programming_ refers both to a collection of
@@ -244,6 +247,7 @@
     of the very same underlying machinery -- i.e., _proofs are
     programs_.  *)
 
+(* ================================================================= *)
 (** ** Program Verification *)
 
 (** Approximately the first third of the book is devoted to developing
@@ -298,6 +302,7 @@
     key ideas and mathematical tools used in a wide variety of
     real-world software and hardware verification tasks. *)
 
+(* ================================================================= *)
 (** ** Type Systems *)
 
 (** Our final major topic, covering approximately the last third of
@@ -321,29 +326,29 @@
 
 *)
 
-(* ###################################################################### *)
+(* ================================================================= *)
 (** ** Further Reading *)
 
 (** This text is intended to be self contained, but readers looking
     for a deeper treatment of a particular topic will find suggestions
     for further reading in the [Postscript] chapter. *)
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Practicalities *)
 
+(* ================================================================= *)
 (** ** Chapter Dependencies *)
 
 (** A diagram of the dependencies between chapters and some suggested
     paths through the material can be found in the file [deps.html]. *)
 
+(* ================================================================= *)
 (** ** System Requirements *)
 
 (** Coq runs on Windows, Linux, and OS X.  You will need:
 
        - A current installation of Coq, available from the Coq home
-         page.  Everything should work with version 8.4.  (Version 8.5
-         will _not_ work, due to a few incompatible changes in Coq
-         between 8.4 and 8.5.)
+         page.  Everything should work with version 8.4 (or 8.5).
 
        - An IDE for interacting with Coq.  Currently, there are two
          choices:
@@ -359,6 +364,7 @@
              some platforms this may involve installing additional
              packages for GUI libraries and such. *)
 
+(* ================================================================= *)
 (** ** Exercises *)
 
 (** Each chapter includes numerous exercises.  Each is marked with a
@@ -393,27 +399,27 @@
     search engines.
 *)
 
+(* ================================================================= *)
 (** ** Downloading the Coq Files *)
 
 (** A tar file containing the full sources for the "release version"
-    of these notes (as a collection of Coq scripts and HTML files) is
+    of this book (as a collection of Coq scripts and HTML files) is
     available here:
 
         http://www.cis.upenn.edu/~bcpierce/sf
 
-    If you are using the notes as part of a class, you may be given
-    access to a locally extended version of the files, which you
-    should use instead of the release version.
-*)
+    (If you are using the book as part of a class, your professor may
+    give you access to a locally modified version of the files, which
+    you should use instead of the release version.) *)
 
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Note for Instructors *)
 
 (** If you intend to use these materials in your own course, you will
     undoubtedly find things you'd like to change, improve, or add.
     Your contributions are welcome!
 
-    To keep the legalities of the situation clean and to have a single
+    In order to keep the legalities simple and to have a single
     point of responsibility in case the need should ever arise to
     adjust the license terms, sublicense, etc., we ask all
     contributors (i.e., everyone with access to the developers'
@@ -442,16 +448,13 @@
 
     We'll set you up with access to the subversion repository and 
     developers' mailing lists.  In the repository you'll find a 
-    file [INSTRUCTORS] with further instructions.
+    file [INSTRUCTORS] with further instructions. *)
 
-*)
-
-(* ###################################################################### *)
+(* ################################################################# *)
 (** * Translations *)
 
 (** Thanks to the efforts of a team of volunteer translators,
     _Software Foundations_ can now be enjoyed in Japanese at
-    [http://proofcafe.org/sf].  A Chinese translation is underway.
-*)
+    [http://proofcafe.org/sf].  A Chinese translation is underway. *)
 
-(** $Date: 2016-05-26 17:51:14 -0400 (Thu, 26 May 2016) $ *)
+(** $Date: 2016-06-08 09:38:25 -0400 (Wed, 08 Jun 2016) $ *)

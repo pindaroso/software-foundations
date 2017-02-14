@@ -1,5 +1,6 @@
 (** * Tactics: More Basic Tactics *)
 
+
 (** This chapter introduces several more proof strategies and
     tactics that allow us to prove more interesting properties of
     functional programs.  We will see:
@@ -14,7 +15,7 @@
 
 Require Export Poly.
 
-(* ###################################################### *)
+(* ################################################################# *)
 (** * The [apply] Tactic *)
 
 (** We often encounter situations where the goal to be proved is
@@ -128,7 +129,7 @@ Proof.
 *)
 (** [] *)
 
-(* ###################################################### *)
+(* ################################################################# *)
 (** * The [apply ... with ...] Tactic *)
 
 (** The following silly example uses two rewrites in a row to
@@ -186,7 +187,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ###################################################### *)
+(* ################################################################# *)
 (** * The [inversion] Tactic *)
 
 (** Recall the definition of natural numbers:
@@ -354,7 +355,7 @@ Proof.
       as completed and pops it off the goal stack. *)
 
 
-(* ###################################################### *)
+(* ################################################################# *)
 (** * Using Tactics on Hypotheses *)
 
 (** By default, most tactics work on the goal formula and leave
@@ -417,7 +418,7 @@ Proof.
     (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ###################################################### *)
+(* ################################################################# *)
 (** * Varying the Induction Hypothesis *)
 
 (** Sometimes it is important to control the exact form of the
@@ -734,7 +735,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ###################################################### *)
+(* ################################################################# *)
 (** * Unfolding Definitions *)
 
 (** It sometimes happens that we need to manually unfold a Definition
@@ -856,7 +857,7 @@ Proof.
   - reflexivity.
 Qed.
 
-(* ###################################################### *)
+(* ################################################################# *)
 (** * Using [destruct] on Compound Expressions *)
 
 (** We have seen many examples where [destruct] is used to
@@ -972,7 +973,7 @@ Proof.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
-(* ################################################################## *)
+(* ################################################################# *)
 (** * Review *)
 
 (** We've now seen many of Coq's most fundamental tactics.  We'll
@@ -1035,7 +1036,7 @@ Proof.
         else that depends on it) from the context back to an explicit
         hypothesis in the goal formula *)
 
-(* ###################################################### *)
+(* ################################################################# *)
 (** * Additional Exercises *)
 
 (** **** Exercise: 3 stars (beq_nat_sym)  *)
@@ -1078,8 +1079,8 @@ Proof.
     things than necessary.  Hint: what property do you need of [l1]
     and [l2] for [split] [combine l1 l2 = (l1,l2)] to be true?)  *)
 
-Definition split_combine_statement : Prop :=
-(* FILL IN HERE *) admit.
+Definition split_combine_statement : Prop 
+  (* REPLACE THIS LINE WITH   := _your_definition_ . *) . Admitted.
 
 Theorem split_combine : split_combine_statement.
 Proof.
@@ -1133,6 +1134,6 @@ Proof.
 (* FILL IN HERE *)
 (** [] *)
 
-(** $Date: 2016-05-26 16:17:19 -0400 (Thu, 26 May 2016) $ *)
+(** $Date: 2016-07-14 17:02:35 -0400 (Thu, 14 Jul 2016) $ *)
 
 
