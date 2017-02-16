@@ -112,3 +112,42 @@ Proof.
   - reflexivity.
   - simpl. reflexivity.
 Qed.
+
+Lemma successors_equal_implies_equal:
+  forall a b, S a = S b -> a = b.
+Proof.
+  intros. inversion H. reflexivity.
+Qed.
+
+Check add.
+Check @add.
+
+Lemma n_plus_zero_equals_n:
+  forall n, (add n O) = n.
+Proof.
+  intros. induction n.
+  - reflexivity.
+  - simpl. rewrite -> IHn. reflexivity.
+Qed.
+
+Lemma modus_tollens:
+  forall p q: Prop, (p->q) -> ~q -> ~p.
+Proof.
+  auto.
+Qed.
+
+Lemma conjunction_elimination:
+  forall p q, p /\ q -> p.
+Proof.
+  intuition.
+Qed.
+
+Require Import ZArith.
+(* or Require Import Omega. *)
+
+Lemma odds_arent_even:
+  forall a b: nat, 2*a + 1 <> 2*b.
+Proof.
+  intros.
+  omega.
+Qed.
