@@ -148,6 +148,7 @@ Qed.
 Example and_exercise :
   forall n m : nat, n + m = 0 -> n = 0 /\ m = 0.
 Proof.
+  intros.
   (* FILL IN HERE *) Admitted.
 (** [] *)
 
